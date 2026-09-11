@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — registered via @theme so `font-heading` /           */
+/* `font-body` Tailwind utilities are generated (Tailwind v4 pattern). */
+/* ------------------------------------------------------------------ */
+@theme {
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-surface-2: #1f1f22;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  /* Unified keyboard focus ring — amber, matches the progress accent.
+     Applies to every focusable element automatically (inputs, buttons, cards). */
+  :focus-visible {
+    outline: 2px solid rgba(251, 191, 36, 0.8);
+    outline-offset: 2px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Custom Scrollbar — slim, rounded, subtle (WebKit + Firefox)         */
+/* ------------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 8px;
+  border: 2px solid #09090b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #09090b;
+}
+
+/* ------------------------------------------------------------------ */
+/* Animation keyframes + helper classes                                */
+/* .animate-fade-in is also consumed by MediaModal / GistSyncModal.    */
+/* ------------------------------------------------------------------ */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes view-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fade-in 0.25s ease-out both; }
+.animate-fade-in-up { animation: fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-scale-in { animation: scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-view-enter { animation: view-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Solid Panel Helper (fallback)                                       */
+/* ------------------------------------------------------------------ */
+.corp-panel {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+}
+
+/* Mobile optimizations */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-pb {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  .safe-area-pt {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Touch targets */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide horizontal scrollbar while keeping vertical scrolling usable */
+.no-scrollbar-x {
+  overflow-x: hidden;
+}
+.no-scrollbar-x::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar-x {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Momentum scrolling */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+}

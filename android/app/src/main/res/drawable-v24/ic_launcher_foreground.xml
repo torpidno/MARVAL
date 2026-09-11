@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Marvel brand mark: white hero shield with amber star, on #DC2626 background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 C43,30 36,37 36,47 C36,61 46,69 54,78 C62,69 72,61 72,47 C72,37 65,30 54,30 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M54,43 C54.6,48.6 59.4,53.4 65,54 C59.4,54.6 54.6,59.4 54,65 C53.4,59.4 48.6,54.6 43,54 C48.6,53.4 53.4,48.6 54,43 Z" />
+</vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Marvel brand mark for splash: red shield with white outline and amber star,
+         centered on the #09090b splash background -->
+    <path
+        android:fillColor="#DC2626"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:pathData="M36,16 C27,16 21,22 21,31 C21,42 29,49 36,56 C43,49 51,42 51,31 C51,22 45,16 36,16 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M36,28 C36.5,32.5 39.5,35.5 44,36 C39.5,36.5 36.5,39.5 36,44 C35.5,39.5 32.5,36.5 28,36 C32.5,35.5 35.5,32.5 36,28 Z" />
+</vector>

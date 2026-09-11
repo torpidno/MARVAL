@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "authorizedDomains": [
+      "localhost"
+    ],
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Marvel Watch Tracker"
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}

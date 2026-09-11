@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "261795279046",
+    "project_id": "marval-5f1cf",
+    "storage_bucket": "marval-5f1cf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261795279046:android:d40986e06804f2d9a7e7c7",
+        "android_client_info": {
+          "package_name": "com.marvel.watchtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDT_ZVPVzv0s9_WGRGnZJFCrkruazvHtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+{
+  "appId": "com.marvel.watchtracker",
+  "appName": "Marvel Watch Tracker",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "backgroundColor": "#09090b",
+  "android": {
+    "backgroundColor": "#09090b"
+  }
+}

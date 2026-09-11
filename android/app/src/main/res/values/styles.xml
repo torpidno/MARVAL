@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme: always-dark (no DayNight switching), Marvel brand colors.
+         Parent Theme.AppCompat.NoActionBar is the dark AppCompat theme, so any
+         pre-webview window rendering is dark with no white flash. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#DC2626</item>
+        <item name="colorPrimaryDark">#09090b</item>
+        <item name="colorAccent">#F59E0B</item>
+        <item name="android:windowBackground">#09090b</item>
+        <item name="android:statusBarColor">#09090b</item>
+        <item name="android:navigationBarColor">#09090b</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <!-- Action-bar-less variant used once the web UI is rendering. Force-dark. -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">#09090b</item>
+        <item name="android:statusBarColor">#09090b</item>
+        <item name="android:navigationBarColor">#09090b</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <!-- Launch/splash theme (AndroidX core splash). Dark on every API level:
+         Android 12+ uses windowSplashScreen*; older devices use android:background
+         (@drawable/splash layer-list). postSplashScreenTheme keeps the post-splash
+         window dark. -->
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#09090b</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+        <item name="android:background">@drawable/splash</item>
+        <item name="android:statusBarColor">#09090b</item>
+        <item name="android:navigationBarColor">#09090b</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>
