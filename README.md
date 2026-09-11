@@ -42,19 +42,28 @@ Track your journey through the Infinity Saga, Multiverse Saga, and beyond across
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Install & Getting Started
 
-### Prerequisites
+### Option 1: Download Pre-built Releases (Recommended for Users)
+Pre-packaged desktop installers and Android builds are available on the [**GitHub Releases**](https://github.com/torpidno/MARVAL/releases) page:
+- 🪟 **Windows**: Download the latest `.exe` installer from [Releases](https://github.com/torpidno/MARVAL/releases/latest).
+- 📱 **Android**: Download the latest `.apk` from [Releases](https://github.com/torpidno/MARVAL/releases/latest).
 
+---
+
+### Option 2: Run from Source (Developers)
+
+#### Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+- [npm](https://www.npmjs.com/) (included with Node.js)
+- [Git](https://git-scm.com/)
 
-### Installation
+#### Setup Steps
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/marvel-watch-tracker.git
-   cd marvel-watch-tracker
+   git clone https://github.com/torpidno/MARVAL.git
+   cd MARVAL
    ```
 
 2. **Install dependencies:**
@@ -62,11 +71,24 @@ Track your journey through the Infinity Saga, Multiverse Saga, and beyond across
    npm install
    ```
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:5173](http://localhost:5173) in your browser.
+3. **Run the Application:**
+
+   - **Web (Browser)**:
+     ```bash
+     npm run dev
+     ```
+     Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+   - **Desktop (Electron)**:
+     ```bash
+     npm run electron
+     ```
+
+   - **Android (Capacitor)**:
+     ```bash
+     npm run android:sync
+     npm run android:open
+     ```
 
 ---
 
